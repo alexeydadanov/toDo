@@ -16,6 +16,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func addItem(_ sender: Any) {
         alert()
     }
+    @IBAction func editTapped(_ sender: Any) {
+       
+        if (listTableView.isEditing == true) {
+            listTableView.setEditing(false, animated: true)
+        } else {
+            listTableView.setEditing(true, animated: true)
+        }
+
+        print("lala")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +74,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         items.remove(at: indexPath.row)
         listTableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
+        let itemToMove = items[fromIndexPath.row]
+        items.remove(at: fromIndexPath.row)
+        items.insert(itemToMove, at: toIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
 }
 
