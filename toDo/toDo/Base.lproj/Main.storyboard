@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LNh-0y-S8P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LNh-0y-S8P">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,7 +46,7 @@
                                         <color key="backgroundColor" red="0.30588235289999999" green="0.74901960779999999" blue="0.96862745100000003" alpha="0.38" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="itemLabel" destination="Eec-ts-CUb" id="xar-Wv-VH6"/>
-                                            <segue destination="IVl-Bt-nxC" kind="push" id="oGS-cz-Dk8"/>
+                                            <segue destination="IVl-Bt-nxC" kind="show" id="oGS-cz-Dk8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -94,13 +94,27 @@
                     <view key="view" contentMode="scaleToFill" id="ASp-vR-zbS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNb-26-hf8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" keyboardAppearance="alert"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yNb-26-hf8" secondAttribute="trailing" id="AaO-D8-4Cw"/>
+                            <constraint firstItem="yNb-26-hf8" firstAttribute="leading" secondItem="ASp-vR-zbS" secondAttribute="leading" id="YbC-gX-H0V"/>
+                            <constraint firstItem="yNb-26-hf8" firstAttribute="top" secondItem="ASp-vR-zbS" secondAttribute="top" id="fDB-Vo-fBQ"/>
+                            <constraint firstItem="9jV-Iu-o1k" firstAttribute="top" secondItem="yNb-26-hf8" secondAttribute="bottom" id="gKF-rH-yZ1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Sz-kD-sQX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXu-iv-DjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="796"/>
+            <point key="canvasLocation" x="1891.875" y="795.42253521126759"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iCT-sm-FiV">
